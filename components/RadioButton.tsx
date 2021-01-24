@@ -9,6 +9,7 @@ interface Props {
 }
 
 const InnerLabel = styled.div`
+    ${tw`block text-xl p-2`}
 `;
 
 const Input = styled.input`
@@ -33,8 +34,8 @@ const RadioButton : React.FunctionComponent<Props> = (props: Props) => {
     return (
         <Container>
             <Input id={id} name="radiobutton" value={value} type="radio"/>
-            <label for={id} css={[`ml-3`]}>
-                <InnerLabel css={[tw`block text-xl p-2`]}>{props.children}</InnerLabel>
+            <label htmlFor={id}>
+                <InnerLabel>{props.children}</InnerLabel>
             </label>
         </Container>
     );
