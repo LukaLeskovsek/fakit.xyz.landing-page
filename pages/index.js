@@ -39,8 +39,8 @@ ${tw`relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto 
     ${tw`block text-xl font-medium`}
   }
   button {
-    ${tw`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 
-    hover:bg-purple-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+    ${tw`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-indigo-600 tracking-widest
+    hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
   }
 }
 `;
@@ -72,7 +72,7 @@ export default function Home() {
             <h2>
              F*CK!
             </h2>
-            <p css={[tw`mt-4 text-lg sm:mt-3`]}>
+            <p css={[tw`mt-4 text-lg sm:mt-3 italic`]}>
             An extremely flexible, magic word that exists in nearly every part of speech. It can be used as a noun, verb, adjective, and adverb.
         
           (used to express anger, disgust, peremptory rejection, etc., often followed by a pronoun, as you or it.)
@@ -82,7 +82,7 @@ export default function Home() {
         
           <fieldset css={[tw`sm:col-span-2`]}>
             <legend >
-              Express your feelings and go wild!
+              Express yourself!
             </legend>
             <ItemsGroup>
               <RadioButton id="fuck_you" value="you">You</RadioButton>
@@ -106,7 +106,7 @@ export default function Home() {
        
           <FormFooter>
             <button type="submit">
-              Generate Link
+              F*CK!
             </button>
           </FormFooter>
         </form>
