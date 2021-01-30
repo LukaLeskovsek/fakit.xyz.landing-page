@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, Ref } from 'react';
 import tw, { styled, css } from 'twin.macro';
 
 interface Props {
@@ -19,26 +19,16 @@ const Container = styled.div`
     ${tw`flex items-center`}
 
 `;
-
-// <div>
-//                 <input id="budget_under_25k" name="budget" value="under_25k" type="radio"/>
-//                 <label for="budget_under_25k" css="ml-3">
-//                   <span css={[tw`block text-xl p-10`]}>YOU</span>
-//                 </label>
-//               </div>
-
-const RadioButton : React.FunctionComponent<Props> = (props: Props) => {
-
-    const {name, id, value} = props;
-
+const RadioButton = React.forwardRef<HTMLInputElement, Props>((props, ref)  => {
+    const {id, value} = props;
     return (
         <Container>
-            <Input id={id} name="radiobutton" value={value} type="radio"/>
+            <Input id={id} name="radiobutton" value={value} type="radio" ref={ref}/>
             <label htmlFor={id}>
                 <InnerLabel>{props.children}</InnerLabel>
             </label>
         </Container>
     );
-}
+});
 
 export default RadioButton;

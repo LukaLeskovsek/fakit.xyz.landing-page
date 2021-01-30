@@ -2,6 +2,8 @@ import Head from 'next/head'
 import tw, { styled, css } from 'twin.macro';
 import Image from 'next/image'
 import RadioButton from '../components/RadioButton';
+import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/router';
 
 const Button = styled.button`
   background: palevioletred;
@@ -52,7 +54,19 @@ const FormFooter = styled.div`
 const ItemsGroup = styled.div`
   ${tw`mt-4 grid grid-cols-2 gap-y-4`}
 `;
+
+const generateLink = () => {
+
+}
 export default function Home() {
+  const { handleSubmit, register, errors } = useForm();
+  const router = useRouter();
+
+  const onSubmit = (data) => {
+    console.log(`Form Data: ${JSON.stringify(data)}`);
+    router.push('/magic?type='+encodeURIComponent(data.radiobutton))
+  }
+  
   return (
     <Container >
       <Head>
@@ -68,51 +82,51 @@ export default function Home() {
 
         <GeneratorContainer>
           <div css={[tw`lg:pr-8`]}>
-          <div css={[tw`max-w-md mx-auto sm:max-w-lg lg:mx-0`]}ß>
+          <div css={[tw`max-w-md mx-auto sm:max-w-lg lg:mx-0`]}>
             <h2>
-             F*CK!
+              F*CK!
             </h2>
             <p css={[tw`mt-4 text-lg sm:mt-3 italic`]}>
             An extremely flexible, magic word that exists in nearly every part of speech. It can be used as a noun, verb, adjective, and adverb.
-        
+
           (used to express anger, disgust, peremptory rejection, etc., often followed by a pronoun, as you or it.)
           </p>
 
-        <form action="#" method="POST">
-        
+        <form onSubmit={handleSubmit(onSubmit)}>
+
           <fieldset css={[tw`sm:col-span-2`]}>
             <legend >
               Express yourself!
             </legend>
-            <ItemsGroup>
-              <RadioButton id="fuck_you" value="you">You</RadioButton>
+            <ItemsGroup >
+             <RadioButton id="fuck_you" value="you" ref={register}>You</RadioButton>
 
-              <RadioButton id="fuck_me" value="me">Me</RadioButton>
+              <RadioButton id="fuck_me" value="me" ref={register}>Me</RadioButton>
 
-              <RadioButton id="fuck_off" value="off">Off</RadioButton>
+              <RadioButton id="fuck_off" value="off" ref={register}>Off</RadioButton>
 
-              <RadioButton id="fuck_yeah" value="yeah">Yeah</RadioButton>
-               
-              <RadioButton id="fuck_it" value="it">IT</RadioButton>
+              <RadioButton id="fuck_yeah" value="yeah" ref={register}>Yeah</RadioButton>
+                
+              <RadioButton id="fuck_it" value="it" ref={register}>IT</RadioButton>
               
-              <RadioButton id="fuck_this" value="this">This</RadioButton>
+              <RadioButton id="fuck_this" value="this" ref={register}>This</RadioButton>
 
-              <RadioButton id="fuck_that" value="that">That</RadioButton>
+              <RadioButton id="fuck_that" value="that" ref={register}>That</RadioButton>
 
-              <RadioButton id="fuck_no" value="no">NO</RadioButton>
+              <RadioButton id="fuck_no" value="no" ref={register}>NO</RadioButton>
 
             </ItemsGroup>
           </fieldset>
-       
+
           <FormFooter>
-            <button type="submit">
+            <button>
               F*CK!
             </button>
           </FormFooter>
         </form>
-      </div>
-    </div>
-  </GeneratorContainer>
+        </div>
+        </div>
+    </GeneratorContainer>
 
     </Container>
   )
