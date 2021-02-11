@@ -4,6 +4,8 @@ import Image from 'next/image'
 import RadioButton from '../components/RadioButton';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
+
 
 const Button = styled.button`
   background: palevioletred;
@@ -71,6 +73,32 @@ export default function Home() {
     <Container >
       <Head>
         <title>F*ck IT</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <NextSeo
+          title="F*ck IT"
+          description="An extremely flexible, magic word that exists in nearly every part of speech.."
+          canonical="https://fakit.xyz/"
+          openGraph={{
+            url: 'https://fakit.xyz/',
+            title: 'F*ck IT',
+            description: 'Generate your F*ck version and express your feelings!',
+            images: [
+              {
+                url: 'https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg',
+                width: 192,
+                height: 75,
+                alt: 'Og Image Alt F*ck',
+              }
+            ],
+            site_name: 'F*ck IT',
+          }}
+          twitter={{
+            handle: '@LeskovsekLuka',
+            site: '@site',
+            cardType: 'summary_large_image',
+          }}
+        />
       </Head>
 
   
@@ -126,6 +154,7 @@ export default function Home() {
         </form>
         </div>
         </div>
+        
     </GeneratorContainer>
 
     </Container>
