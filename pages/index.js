@@ -75,6 +75,27 @@ export default function Home() {
         <title>F*ck IT</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Express your feelings frustration or joy!" />
+
+        
+        <meta itemprop="name" content="F*ck IT" />
+        <meta itemprop="description" content="Express your feelings frustration or joy!" />
+        <meta itemprop="image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg" />
+
+        
+        <meta property="og:url" content="https://fakit.xyz" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="F*ck IT" />
+        <meta property="og:description" content="Express your feelings frustration or joy!" />
+        <meta property="og:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg" />
+
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="F*ck IT" />
+        <meta name="twitter:description" content="Express your feelings frustration or joy!" />
+        <meta name="twitter:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg" />
+
+        
         <NextSeo
           title="F*ck IT"
           description="An extremely flexible, magic word that exists in nearly every part of speech.."
