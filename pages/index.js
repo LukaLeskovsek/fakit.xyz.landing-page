@@ -80,20 +80,20 @@ export default function Home() {
         
         <meta itemprop="name" content="F*ck IT" />
         <meta itemprop="description" content="Express your feelings frustration or joy!" />
-        <meta itemprop="image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg" />
+        <meta itemprop="image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <meta property="og:url" content="https://fakit.xyz" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="F*ck IT" />
         <meta property="og:description" content="Express your feelings frustration or joy!" />
-        <meta property="og:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg" />
+        <meta property="og:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="F*ck IT" />
         <meta name="twitter:description" content="Express your feelings frustration or joy!" />
-        <meta name="twitter:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg" />
+        <meta name="twitter:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <NextSeo
@@ -106,7 +106,7 @@ export default function Home() {
             description: 'Generate your F*ck version and express your feelings!',
             images: [
               {
-                url: 'https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg',
+                url: 'https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75',
                 width: 192,
                 height: 75,
                 alt: 'Og Image Alt F*ck',
