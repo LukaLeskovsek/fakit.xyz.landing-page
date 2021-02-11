@@ -75,35 +75,35 @@ export default function Home() {
         <title>F*ck IT</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Express your feelings frustration or joy!" />
+        <meta name="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
 
         
         <meta itemprop="name" content="F*ck IT" />
-        <meta itemprop="description" content="Express your feelings frustration or joy!" />
+        <meta itemprop="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
         <meta itemprop="image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <meta property="og:url" content="https://fakit.xyz" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="F*ck IT" />
-        <meta property="og:description" content="Express your feelings frustration or joy!" />
+        <meta property="og:description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
         <meta property="og:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="F*ck IT" />
-        <meta name="twitter:description" content="Express your feelings frustration or joy!" />
+        <meta name="twitter:description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
         <meta name="twitter:image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <NextSeo
           title="F*ck IT"
-          description="An extremely flexible, magic word that exists in nearly every part of speech.."
+          description="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck."
           canonical="https://fakit.xyz/"
           openGraph={{
             url: 'https://fakit.xyz/',
             title: 'F*ck IT',
-            description: 'Generate your F*ck version and express your feelings!',
+            description: 'It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck.',
             images: [
               {
                 url: 'https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75',
