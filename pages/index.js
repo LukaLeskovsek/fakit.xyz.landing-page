@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
-
 const Button = styled.button`
   background: palevioletred;
   border-radius: 3px;
@@ -40,7 +39,7 @@ ${tw`relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto 
     ${tw`focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300`}
   }
   legend {
-    ${tw`block text-xl font-medium`}
+    ${tw`block text-sm font-medium`}
   }
   button {
     ${tw`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-indigo-600 tracking-widest
@@ -145,7 +144,7 @@ export default function Home() {
 
           <fieldset css={[tw`sm:col-span-2`]}>
             <legend >
-              Express yourself!
+            It’s time to acknowledge your frustration. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck.
             </legend>
             <ItemsGroup >
              <RadioButton id="fuck_you" value="you" ref={register}>You</RadioButton>

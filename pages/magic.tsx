@@ -2,6 +2,7 @@ import React from 'react';
 import { NextPageContext } from 'next'
 import Link from 'next/link';
 import tw, { styled, css } from 'twin.macro';
+import ConfettiComponent from './../components/ConfettiComponent';
 
 interface Props {
     type?: string;
@@ -37,6 +38,7 @@ export default class Page extends React.Component<Props> {
             <main>
                 <Container>
                     <Card>
+                        {<ConfettiComponent />}
                         <GenerateText>Fuck {this.props.type}!</GenerateText>
                         <p/>
                         <CTA>
