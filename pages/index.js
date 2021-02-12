@@ -71,6 +71,7 @@ export default function Home() {
   return (
     <Container >
       <Head>
+        <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
         <title>F*ck IT</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
