@@ -65,6 +65,10 @@ export default function Home() {
 
   const onSubmit = (data) => {
     console.log(`Form Data: ${JSON.stringify(data)}`);
+    if(pa !== undefined)
+    {
+      pa.track({name: 'F*CK Generator', value: data.radiobutton});
+    }
     router.push('/magic?type='+encodeURIComponent(data.radiobutton))
   }
   
