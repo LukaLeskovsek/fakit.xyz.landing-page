@@ -37,9 +37,9 @@ return(
             <meta name="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
 
             
-            <meta itemprop="name" content="F*ck IT" />
-            <meta itemprop="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
-            <meta itemprop="image" content="https://fakit.xyz/_next/image?url=%2Ffakit.generated.yeah.png&w=740&q=125" />
+            <meta itemProp="name" content="F*ck IT" />
+            <meta itemProp="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
+            <meta itemProp="image" content="https://fakit.xyz/_next/image?url=%2Ffakit.generated.yeah.png&w=740&q=125" />
 
             
             <meta property="og:url" content="https://fakit.xyz" />

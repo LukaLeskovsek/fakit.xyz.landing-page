@@ -12,10 +12,19 @@ export default class MyDocument extends Document {
         })
       const initialProps = await Document.getInitialProps(ctx)
 
+      
+        if(process.env.NODE_ENV === 'development'){
+          const scr = <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+        }
+        else {
+          scr = <> </>
+        }
+      
       return {
         ...initialProps,
         styles: (
           <>
+            <scr/>
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>

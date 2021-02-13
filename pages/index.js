@@ -55,17 +55,14 @@ const FormFooter = styled.div`
 const ItemsGroup = styled.div`
   ${tw`mt-4 grid grid-cols-2 gap-y-4`}
 `;
-
-const generateLink = () => {
-
-}
 export default function Home() {
   const { handleSubmit, register, errors } = useForm();
   const router = useRouter();
 
   const onSubmit = (data) => {
-    console.log(`Form Data: ${JSON.stringify(data)}`);
-    if(pa !== undefined)
+    console.log('-----------------------');
+    console.log(process.env.NODE_ENV);
+    if(typeof(pa) != "undefined")
     {
       pa.track({name: 'F*CK Generator', value: data.radiobutton});
     }
@@ -75,7 +72,6 @@ export default function Home() {
   return (
     <Container >
       <Head>
-        <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
         <title>F*ck IT</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
