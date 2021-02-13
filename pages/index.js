@@ -173,7 +173,7 @@ export default function Home() {
 
           <FormFooter>
             <button>
-              F*CK!
+              Generate
             </button>
           </FormFooter>
         </form>
