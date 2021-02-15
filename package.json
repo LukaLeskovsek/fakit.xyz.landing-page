@@ -20,6 +20,7 @@
     "@react-hook/window-size": "^3.0.7",
     "autoprefixer": "^10.2.3",
     "classnames": "^2.2.6",
+    "framer-motion": "^3.3.0",
     "lodash": "^4.17.20",
     "next": "10.0.5",
     "next-absolute-url": "^1.2.2",

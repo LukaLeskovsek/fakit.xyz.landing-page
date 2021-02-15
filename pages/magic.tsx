@@ -4,16 +4,20 @@ import tw, { styled, css } from 'twin.macro';
 import ConfettiComponent from './../components/ConfettiComponent';
 import { ToastProvider } from 'react-toast-notifications';
 import Head from 'next/head';
-import { 
-    TwitterIcon, 
-    TwitterShareButton, 
-    FacebookIcon, 
+import {
+    TwitterIcon,
+    TwitterShareButton,
+    FacebookIcon,
     FacebookShareButton,
     ViberIcon,
     ViberShareButton,
     WhatsappIcon,
     WhatsappShareButton
 } from "react-share";
+import { motion } from "framer-motion"
+
+
+
 interface Props {
     type?: string;
 }
@@ -23,7 +27,7 @@ const Container = styled.div`
 `;
 
 const GenerateText = styled.div`
-    ${tw`text-6xl font-bold p-5 py-20` }
+    ${tw`text-6xl font-bold p-5 py-20`}
 `;
 
 const Card = styled.div`
@@ -42,69 +46,85 @@ const ShareSection = styled.div`
     ${tw`table w-full pt-4 text-center`}
 `;
 const Page = (props: Props) => {
-return( 
-    <main>
-        <Head>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta name="keywords" content="Fuck, f*ck, frustration, express yourself, helpless" />
-            <meta name="author" content="Luka Leskovsek" />
-            <meta name="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
+    return (
+        <main>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="keywords" content="Fuck, f*ck, frustration, express yourself, helpless" />
+                <meta name="author" content="Luka Leskovsek" />
+                <meta name="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
 
-            
-            <meta itemProp="name" content="F*ck IT" />
-            <meta itemProp="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
-            <meta itemProp="image" content="https://fakit.xyz/fakit.generated.yeah.png" />
 
-            
-            <meta property="og:url" content="https://fakit.xyz" />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content="F*ck IT" />
-            <meta property="og:description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
-            <meta property="og:image" content="https://fakit.xyz/fakit.generated.yeah.png" />
+                <meta itemProp="name" content="F*ck IT" />
+                <meta itemProp="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
+                <meta itemProp="image" content="https://fakit.xyz/fakit.generated.yeah.png" />
 
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="F*ck IT" />
-            <meta name="twitter:description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
-            <meta name="twitter:image" content="https://fakit.xyz/fakit.generated.yeah.png" />
-        </Head>
-        <ToastProvider autoDismiss={true}>
-            <Container>
-                <Card>
-                    <ConfettiComponent GenerateType={props.type}/>
-                    <GenerateText>Fuck {props.type}!</GenerateText>
-                    <CTA>
-                        <Link href={`/`}>
-                            <a>Generate again!</a>
-                        </Link>
-                    </CTA>
-                    <ShareSection>
-                    
-                        <TwitterShareButton url='https://fakit.xyz/' title='F*CK! It’s time to acknowledge your frustration.'>
-                            <TwitterIcon size={32} round={true} />
-                        </TwitterShareButton>
-                    
-                        <FacebookShareButton url='https://fakiy.xyz/' quote='F*CK! It’s time to acknowledge your frustration.' >
-                            <FacebookIcon size={32} round={true} />
-                        </FacebookShareButton>
-                    
-                        <ViberShareButton url='https://fakit.xyz/' title='F*CK! It’s time to acknowledge your frustration.'>
-                            <ViberIcon size={32} round={true} />
-                        </ViberShareButton>
-                            
-                        <WhatsappShareButton url='https://fakit.xyz/' title='F*CK! It’s time to acknowledge your frustration.'>
-                            <WhatsappIcon size={32} round={true} />
-                        </WhatsappShareButton>
-                   
-                    </ShareSection>
-                </Card>
-            </Container>
-        </ToastProvider>
-    </main>
+
+                <meta property="og:url" content="https://fakit.xyz" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="F*ck IT" />
+                <meta property="og:description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
+                <meta property="og:image" content="https://fakit.xyz/fakit.generated.yeah.png" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="F*ck IT" />
+                <meta name="twitter:description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
+                <meta name="twitter:image" content="https://fakit.xyz/fakit.generated.yeah.png" />
+            </Head>
+            <ToastProvider autoDismiss={true}>
+                <Container>
+                    <ConfettiComponent GenerateType={props.type} />
+                    <Card>
+                        <motion.div
+                            initial={{ scale: 0.0 }}
+                            animate={{ scale: [1.3, 0.8, 1] }}
+                            transition={{ duration: 0.5, delay:0.5 }}>
+                            <GenerateText>Fuck {props.type}!</GenerateText>
+                        </motion.div>
+
+                        <CTA>
+                            <motion.button
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Link href={`/`}>
+                                    <a>Generate again!</a>
+                                </Link>
+                            </motion.button>
+                        </CTA>
+
+                        <ShareSection>
+
+                            <TwitterShareButton url='https://fakit.xyz/' title='F*CK! It’s time to acknowledge your frustration.'>
+                                <TwitterIcon size={32} round={true} />
+                            </TwitterShareButton>
+
+                            <FacebookShareButton url='https://fakiy.xyz/' quote='F*CK! It’s time to acknowledge your frustration.' >
+                                <FacebookIcon size={32} round={true} />
+                            </FacebookShareButton>
+
+                            <ViberShareButton url='https://fakit.xyz/' title='F*CK! It’s time to acknowledge your frustration.'>
+                                <ViberIcon size={32} round={true} />
+                            </ViberShareButton>
+
+                            <WhatsappShareButton url='https://fakit.xyz/' title='F*CK! It’s time to acknowledge your frustration.'>
+                                <WhatsappIcon size={32} round={true} />
+                            </WhatsappShareButton>
+
+                        </ShareSection>
+                    </Card>
+
+                </Container>
+            </ToastProvider>
+        </main>
     )
 }
 
-Page.getInitialProps = async ({query}) => {
+Page.getInitialProps = async ({ query }) => {
 
     const type = query.type;
 
