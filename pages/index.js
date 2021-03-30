@@ -30,20 +30,31 @@ const GeneratorContainer = styled.div`
 ${tw`relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2`}
 & {
   h2 {
-    ${tw`text-3xl font-extrabold tracking-tight sm:text-8xl text-black my-5`}
+    ${tw`text-3xl font-extrabold tracking-tight sm:text-8xl text-gray-800 my-5`}
   }
   form {
-    ${tw`mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8`}
+    ${tw`mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 text-gray-800`}
   }
   input { 
-    ${tw`focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300`}
+    ${tw`focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 text-gray-800`}
   }
   legend {
     ${tw`block text-sm font-medium`}
   }
   button {
-    ${tw`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-indigo-600 tracking-widest
-    hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+    ${tw`
+      inline-flex justify-center 
+      py-2 px-4 
+      border 
+      border-transparent 
+      shadow-sm 
+      text-2xl 
+      font-medium 
+      rounded-md 
+      text-white 
+      bg-gray-600 
+      tracking-widest
+      hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
   }
 }
 `;
@@ -70,6 +81,7 @@ export default function Home() {
   }
   
   return (
+    <>
     <Container >
       <Head>
         <title>F*ck IT</title>
@@ -78,9 +90,9 @@ export default function Home() {
         <meta name="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
 
         
-        <meta itemprop="name" content="F*ck IT" />
-        <meta itemprop="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
-        <meta itemprop="image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
+        <meta itemProp="name" content="F*ck IT" />
+        <meta itemProp="description" content="It’s time to acknowledge your frustration. Maybe you’re feeling helpless or wishing there was some way to express yourself. Or you’re just plain angry and need a word or two to vent. We feel you. We’ve got that word for you. And it starts with F and rhymes with kuck… we mean luck." />
+        <meta itemProp="image" content="https://fakit.xyz/_next/image?url=%2Ffakit_hero_v2.jpg&w=1920&q=75" />
 
         
         <meta property="og:url" content="https://fakit.xyz" />
@@ -179,5 +191,18 @@ export default function Home() {
     </GeneratorContainer>
 
     </Container>
+        
+    <footer css={[tw`relative mt-32`]}>
+        <div css={[tw`container mx-auto`]}>
+            <div css={[tw`border-t flex flex-col items-center`]}>
+                <div css={[tw`sm:w-2/3 text-center py-4`]}>
+                    <p css={[tw`text-sm text-gray-700 font-bold`]}>
+                        © 2021 by <a href='https://twitter.com/LeskovsekLuka'> Luka Leskovsek</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </>
   )
 }

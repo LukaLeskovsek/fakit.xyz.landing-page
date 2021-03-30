@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import tw, { styled, css } from 'twin.macro';
+import tw, { styled } from 'twin.macro';
 import ConfettiComponent from './../components/ConfettiComponent';
 import { ToastProvider } from 'react-toast-notifications';
 import Head from 'next/head';
@@ -19,15 +19,31 @@ interface Props {
     type?: string;
 }
 
-const Container = styled.div`${tw`min-h-screen flex items-center justify-center content-center bg-gray-100`}`;
+const Container = styled.div`${tw`
+    min-h-screen 
+    flex 
+    items-center 
+    justify-center 
+    content-center 
+    bg-gray-100`}`;
 
-const GenerateText = styled.div`${tw`text-6xl font-bold p-5 py-20`}`;
+const GenerateText = styled.div`${tw`
+    text-6xl 
+    font-bold 
+    p-5 py-20 
+    text-gray-800`}`;
 
-const Card = styled.div`${tw`max-w-md px-5 pt-8 pb-4 bg-white rounded-lg shadow-lg`}`;
+const Card = styled.div`${tw`max-w-md px-5 pt-8 pb-4  `}`;
 
 const CTA = styled.div`
-    ${tw`content-center text-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-indigo-600 tracking-widest
-    hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 `}
+    ${tw`content-center text-center py-2 px-4 border 
+        border-transparent shadow-sm text-2xl font-medium 
+        rounded-md text-white 
+        bg-gray-600 
+        tracking-widest
+        hover:bg-gray-500 
+        focus:outline-none 
+        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 `}
 `;
 
 const ShareSection = styled.div`${tw`table w-full pt-4 text-center`}`;
@@ -37,6 +53,7 @@ const Page = (props: Props) => {
     const share_url = 'https://fakit.xyz/magic?type='+props.type;
     
     return (
+        <>
         <main>
             <Head>
                 <meta charSet="utf-8" />
@@ -76,10 +93,10 @@ const Page = (props: Props) => {
                         <CTA>
                             <motion.button
                                 whileHover={{
-                                    scale: 1.2,
+                                    scale: 1.1,
                                     transition: { duration: 0.2 },
                                 }}
-                                whileTap={{ scale: 0.9 }}
+                                whileTap={{ scale: 0.8 }}
                             >
                                 <Link href={`/`}>
                                     <a>Generate again!</a>
@@ -96,14 +113,14 @@ const Page = (props: Props) => {
                             <FacebookShareButton url={share_url}  quote='F*CK! It’s time to acknowledge your frustration.' >
                                 <FacebookIcon size={32} round={true} />
                             </FacebookShareButton>
-
+{/* 
                             <ViberShareButton url={share_url}  title='F*CK! It’s time to acknowledge your frustration.'>
                                 <ViberIcon size={32} round={true} />
                             </ViberShareButton>
 
                             <WhatsappShareButton url={share_url}  title='F*CK! It’s time to acknowledge your frustration.'>
                                 <WhatsappIcon size={32} round={true} />
-                            </WhatsappShareButton>
+                            </WhatsappShareButton> */}
 
                         </ShareSection>
                     </Card>
@@ -111,6 +128,18 @@ const Page = (props: Props) => {
                 </Container>
             </ToastProvider>
         </main>
+        <footer css={[tw`relative pt-1 bg-gray-100`]}>
+            <div css={[tw`container mx-auto px-2`]}>
+                <div css={[tw`mt-8 border-t-2 flex flex-col items-center`]}>
+                    <div css={[tw`sm:w-2/3 text-center py-6`]}>
+                        <p css={[tw`text-sm text-gray-700 font-bold mb-2`]}>
+                            © 2021 by <a href='https://twitter.com/LeskovsekLuka'> Luka Leskovsek</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </>
     )
 }
 
