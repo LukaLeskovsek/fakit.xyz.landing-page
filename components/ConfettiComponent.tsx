@@ -14,10 +14,10 @@ const ConfettiComponent = (props: Props) => {
     const [clipboard, setClipboard] = useClippy();
 
     useEffect(() => {
-        console.log('loaded')
+      //  console.log('loaded')
         setLoaded(true);
-        setClipboard('https://fakit.xyz/magic?type='+props.GenerateType);
-        addToast('Link copied to clipboard', { appearance: 'success' })  
+    //    setClipboard('https://fakit.xyz/magic?type='+props.GenerateType);
+   //     addToast('Link copied to clipboard', { appearance: 'success' })  
     }, [])
 
     return(

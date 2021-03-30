@@ -46,6 +46,29 @@ const CTA = styled.div`
         focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 `}
 `;
 
+const Footer = styled.div`
+${tw`relative pt-1 bg-gray-100`}`
+
+const FooterContainer = styled.div`
+${
+    tw`container mx-auto px-2`
+}`
+
+const FooterBorder = styled.div`
+${
+    tw`mt-8 border-t-2 flex flex-col items-center`
+}`
+
+const FooterTextContainer = styled.div`
+${
+    tw`sm:w-2/3 text-center py-6`
+}`
+
+const FooterText = styled.div`
+${
+    tw`text-sm text-gray-700 font-bold mb-2`
+}`
+
 const ShareSection = styled.div`${tw`table w-full pt-4 text-center`}`;
 const Page = (props: Props) => {
 
@@ -128,17 +151,17 @@ const Page = (props: Props) => {
                 </Container>
             </ToastProvider>
         </main>
-        <footer css={[tw`relative pt-1 bg-gray-100`]}>
-            <div css={[tw`container mx-auto px-2`]}>
-                <div css={[tw`mt-8 border-t-2 flex flex-col items-center`]}>
-                    <div css={[tw`sm:w-2/3 text-center py-6`]}>
-                        <p css={[tw`text-sm text-gray-700 font-bold mb-2`]}>
+        <Footer>
+            <FooterContainer>
+                <FooterBorder>
+                    <FooterTextContainer>
+                        <FooterText>
                             © 2021 by <a href='https://twitter.com/LeskovsekLuka'> Luka Leskovsek</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                        </FooterText>
+                    </FooterTextContainer>
+                </FooterBorder>
+            </FooterContainer>
+        </Footer>
     </>
     )
 }
