@@ -11,18 +11,11 @@ export default class MyDocument extends Document {
           enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         })
       const initialProps = await Document.getInitialProps(ctx)
-
       
-      let scr = <></>;
-      if(process.env.NODE_ENV === 'production'){
-        scr = <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
-      }
-
       return {
         ...initialProps,
         styles: (
           <>
-            <scr/>
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>

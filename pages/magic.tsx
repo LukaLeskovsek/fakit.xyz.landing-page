@@ -36,14 +36,23 @@ const GenerateText = styled.div`${tw`
 const Card = styled.div`${tw`max-w-md px-5 pt-8 pb-4  `}`;
 
 const CTA = styled.div`
-    ${tw`content-center text-center py-2 px-4 border 
-        border-transparent shadow-sm text-2xl font-medium 
-        rounded-md text-white 
+    ${tw`
+        content-center 
+        text-center 
+        py-2 px-4 border 
+        border-transparent 
+        shadow-sm 
+        text-2xl 
+        font-medium 
+        rounded-md 
+        text-white 
         bg-gray-600 
         tracking-widest
         hover:bg-gray-500 
         focus:outline-none 
-        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 `}
+        focus:ring-2 
+        focus:ring-offset-2 
+        focus:ring-indigo-500 `}
 `;
 
 const Footer = styled.div`
@@ -80,6 +89,7 @@ const Page = (props: Props) => {
         <main>
             <Head>
                 <meta charSet="utf-8" />
+                <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="keywords" content="Fuck, f*ck, frustration, express yourself, helpless" />
                 <meta name="author" content="Luka Leskovsek" />
