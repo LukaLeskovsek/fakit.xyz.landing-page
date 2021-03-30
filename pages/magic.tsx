@@ -124,17 +124,11 @@ const Page = (props: Props) => {
                         </motion.div>
 
                         <CTA>
-                            <motion.button
-                                whileHover={{
-                                    scale: 1.1,
-                                    transition: { duration: 0.2 },
-                                }}
-                                whileTap={{ scale: 0.8 }}
-                            >
+                       
                                 <Link href={`/`}>
                                     <a>Generate again!</a>
                                 </Link>
-                            </motion.button>
+                            
                         </CTA>
 
                         <ShareSection>
